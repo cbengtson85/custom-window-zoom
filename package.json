@@ -1,0 +1,63 @@
+{
+    "name": "custom-window-zoom",
+    "displayName": "Custom Window Zoom",
+    "description": "This extension allows you to change the zooom level percentage that VSCode uses when zooming in & out.",
+    "version": "1.0.0",
+    "publisher": "craigb85",
+    "engines": {
+        "vscode": "^1.21.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "onCommand:extension.customWindowZoomIn",
+        "onCommand:extension.customWindowZoomOut"
+    ],
+    "main": "./extension",
+    "contributes": {
+        "keybindings": [
+            {
+                "command": "extension.customWindowZoomIn",
+                "key": "ctrl+9",
+                "mac": "cmd+9"
+            },
+            {
+                "command": "extension.customWindowZoomOut",
+                "key": "ctrl+8",
+                "mac": "cmd+8"
+            }
+        ],
+        "commands": [
+            {
+                "command": "extension.customWindowZoomIn",
+                "title": "Zoom in window"
+            },
+            {
+                "command": "extension.customWindowZoomOut",
+                "title": "Zoom out window"
+            }
+        ],
+        "configuration": {
+            "properties": {
+                "customWindowZoom.zoomLevelChangeValue": {
+                    "type": "number",
+                    "default": 0.5,
+                    "description": "Zoom level value when incrementing/decrementing (can accept decimals)"
+                }
+            },
+            "title": "Code Settings, Custom Window Zoom Settings"
+        }
+    },
+    "scripts": {
+        "postinstall": "node ./node_modules/vscode/bin/install",
+        "test": "node ./node_modules/vscode/bin/test"
+    },
+    "devDependencies": {
+        "typescript": "^2.6.1",
+        "vscode": "^1.1.6",
+        "eslint": "^4.11.0",
+        "@types/node": "^7.0.43",
+        "@types/mocha": "^2.2.42"
+    }
+}
