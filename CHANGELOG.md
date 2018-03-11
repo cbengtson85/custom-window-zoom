@@ -1,5 +1,8 @@
 # Change Log
 
+## 1.1.2
+- update readme
+
 ## 1.1.1
 - Fix math calculating zoom out
 
