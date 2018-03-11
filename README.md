@@ -7,3 +7,4 @@ With this extension you can set the user settings, window.zoomLevel, to any deci
 For Example, set zoom level to .1, if you zoom in it will be .2 and if you zoom out it would be .1 again.
 
 Current keybindings are set to cmd+9 to zoom in and cmd+8 to zoom out, windows users use control+8 & 9. Recommended to override the default (cmd-) (cmd=) zoom keybindings.
+

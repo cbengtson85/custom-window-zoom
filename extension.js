@@ -6,15 +6,18 @@ const vscode = require('vscode');
 // your extension is activated the very first time the command is executed
 function activate(context) {
     console.log('Custom Window Zoom activated');
-    const customLevel = vscode.workspace.getConfiguration('').get('customWindowZoom.zoomLevelChangeValue');   
 
-    const zoomIn = vscode.commands.registerCommand('extension.customWindowZoomIn', () => {  
+    const zoomIn = vscode.commands.registerCommand('extension.customWindowZoomIn', () => { 
+        const customLevel = vscode.workspace.getConfiguration('').get('customWindowZoom.zoomLevelChangeValue');
         const zoomLevel = vscode.workspace.getConfiguration('').get('window.zoomLevel');
-        vscode.workspace.getConfiguration('').update('window.zoomLevel', zoomLevel + customLevel, true)
+        const total = zoomLevel + customLevel
+        vscode.workspace.getConfiguration('').update('window.zoomLevel', parseFloat(total.toFixed(2)), true)
     });
     const zoomOut = vscode.commands.registerCommand('extension.customWindowZoomOut', () => {
+        const customLevel = vscode.workspace.getConfiguration('').get('customWindowZoom.zoomLevelChangeValue');
         const zoomLevel = vscode.workspace.getConfiguration('').get('window.zoomLevel');
-        vscode.workspace.getConfiguration('').update('window.zoomLevel', zoomLevel - customLevel, true)
+        const total = zoomLevel + customLevel
+        vscode.workspace.getConfiguration('').update('window.zoomLevel', parseFloat(total.toFixed(2)), true)
     });
 
     context.subscriptions.push(zoomIn);

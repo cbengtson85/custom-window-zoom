@@ -1,8 +1,12 @@
 {
     "name": "custom-window-zoom",
     "displayName": "Custom Window Zoom",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/cbengtson85/custom-window-zoom.git"
+    },
     "description": "This extension allows you to change the zooom level percentage that VSCode uses when zooming in & out.",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "publisher": "craigb85",
     "engines": {
         "vscode": "^1.21.0"
