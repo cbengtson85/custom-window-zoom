@@ -16,7 +16,7 @@ function activate(context) {
     const zoomOut = vscode.commands.registerCommand('extension.customWindowZoomOut', () => {
         const customLevel = vscode.workspace.getConfiguration('').get('customWindowZoom.zoomLevelChangeValue');
         const zoomLevel = vscode.workspace.getConfiguration('').get('window.zoomLevel');
-        const total = zoomLevel + customLevel
+        const total = zoomLevel - customLevel
         vscode.workspace.getConfiguration('').update('window.zoomLevel', parseFloat(total.toFixed(2)), true)
     });
 
