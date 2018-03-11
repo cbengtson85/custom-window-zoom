@@ -8,3 +8,6 @@ For Example, set zoom level to .1, if you zoom in it will be .2 and if you zoom 
 
 Current keybindings are set to cmd+9 to zoom in and cmd+8 to zoom out, windows users use control+8 & 9. Recommended to override the default (cmd-) (cmd=) zoom keybindings.
 
+
+## Usage
+![Usage](images/zoomusage.gif)

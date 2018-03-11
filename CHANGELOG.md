@@ -1,5 +1,8 @@
 # Change Log
 
+## 1.1.3
+- add usage gif and icon
+
 ## 1.1.2
 - update readme
 
