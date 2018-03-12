@@ -1,5 +1,8 @@
 # Change Log
 
+## 1.1.4
+- update min vscode version
+
 ## 1.1.3
 - add usage gif and icon
 
